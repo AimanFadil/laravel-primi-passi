@@ -17,6 +17,11 @@
                 <h1>{{ $benvenuto }}</h1>
             </div>
         </div>
+        <div class="row">
+            @foreach ($hello as $hell)
+                <div class="col-12">{{ $hell }}</div>
+            @endforeach
+        </div>
     </div>
 </body>
 

@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $benvenuto = 'Hello World!!';
-    return view('homepage', compact('benvenuto'));
+    $saluti = [
+        'benvenuto' => 'Hello World!!',
+        'hello' => ['¡Hola', 'Ahoj', 'Alo', 'Annyeonghaseyo', 'Ave', 'Ciao', 'Cześć', 'Goeie môre', 'Hallå', 'Hallo', 'Halo', 'Hei', 'Hej', 'Hujambo', 'Konnichiwa', 'Kumusta', 'Marhabaan', 'Merhaba', 'Mingalaba', 'Namaskāra', 'Namasté', 'Nazdar', 'Nín hao', 'Olá'],
+    ];
+
+    return view('homepage', $saluti);
 });
